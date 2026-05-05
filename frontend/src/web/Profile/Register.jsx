@@ -67,6 +67,7 @@ const Register = () => {
               className="w-full p-2.5 bg-stone-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-white outline-none transition"
               placeholder="name@company.com" 
               value={email}
+              maxLength={255}
               onChange={(e) => setEmail(e.target.value)} // Cập nhật
             />
           </div>
@@ -80,6 +81,7 @@ const Register = () => {
               className="w-full p-2.5 bg-stone-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-white outline-none transition" 
               placeholder="••••••••" 
               value={password}
+              maxLength={255}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
@@ -93,6 +95,7 @@ const Register = () => {
               placeholder="••••••••" 
               required 
               value={confirmPassword}
+              maxLength={255}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>

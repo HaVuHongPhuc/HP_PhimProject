@@ -73,6 +73,7 @@
                         id="search" 
                         name="search" 
                         type="search" 
+                        maxLength={255}
                         placeholder="Tìm kiếm..." 
                         value={searchTerm} // Giá trị lấy từ kho
                         // Khi gõ chữ báo về cho HomePage

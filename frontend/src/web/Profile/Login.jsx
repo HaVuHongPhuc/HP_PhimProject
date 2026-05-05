@@ -56,9 +56,10 @@ const Login = () => {
               <input 
                 type="email" 
                 className="block w-full p-2.5 bg-stone-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 outline-none transition" 
-                placeholder="name@company.com" 
+                placeholder="name@gmail.com" 
                 required 
                 value={email}
+                maxLength={255}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -72,6 +73,7 @@ const Login = () => {
                 className="block w-full p-2.5 bg-stone-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 outline-none transition" 
                 required 
                 value={password}
+                maxLength={255}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
