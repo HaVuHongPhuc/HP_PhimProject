@@ -72,7 +72,7 @@ const Profile = () => {
       {/* 2. Thẻ Profile chính*/}
       <div className="relative w-full max-w-4xl bg-gray-900/80 backdrop-blur-md rounded-3xl shadow-2xl border border-white/10 overflow-hidden flex flex-col md:flex-row">
         
-        {/* Cột trái: Avatar & Tên (Highlight) */}
+        {/* Cột trái: Avatar & Tên */}
         <div className="w-full md:w-1/3 bg-gradient-to-b from-blue-600/20 to-transparent p-8 flex flex-col items-center border-b md:border-b-0 md:border-r border-white/10">
           <div className="relative group">
             <img 
