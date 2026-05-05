@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
 const AdminHome = () => {
+  // --- KIỂM TRA QUYỀN TRUY CẬP ---
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+
+  useEffect(() => {
+    if (!isAdmin) {
+      alert("Vui lòng đăng nhập quyền Admin!");
+      window.location.href = './adminlogin';
+    }
+  }, [isAdmin]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('adminToken');
+    localStorage.removeItem('isAdmin');
+    window.location.href = '/adminlogin';
+  };
   const [tab, setTab] = useState('movies');
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
@@ -109,7 +124,7 @@ const AdminHome = () => {
   const renderForm = () => {
     const isEdit = formType === 'movie' ? !!formData.id : !!formData._id;
     const formTitle = formType === 'movie' ? (isEdit ? 'CẬP NHẬT PHIM' : 'THÊM PHIM MỚI') : (isEdit ? 'CẬP NHẬT ADMIN' : 'THÊM ADMIN MỚI');
-
+  if (!isAdmin) return null;
     return (
       <div className="animate-fadeIn max-w-4xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg border-t-4 border-yellow-500 overflow-hidden">
@@ -191,7 +206,14 @@ const AdminHome = () => {
           <button onClick={() => setTab('customers')} className={`w-full text-left p-3 rounded-lg transition ${tab === 'customers' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-700'}`}>Khách hàng</button>
           <button onClick={() => setTab('admins')} className={`w-full text-left p-3 rounded-lg transition ${tab === 'admins' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-700'}`}>Quản lý Admin</button>
         </nav>
+                <button 
+          onClick={handleLogout}
+          className="w-full bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white p-3 rounded-lg transition font-bold text-sm border border-red-600/30"
+        >
+          ĐĂNG XUẤT
+        </button>
       </div>
+      
 
       {/* Main Content */}
       <div className="flex-1 p-10 overflow-y-auto">

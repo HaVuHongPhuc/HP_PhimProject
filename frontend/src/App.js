@@ -7,6 +7,7 @@ import Profile from './web/Profile/Profile';
 import Hanhdong from './web/Movies_category/Hanhdong';
 import Kinhdi from './web/Movies_category/Kinhdi';
 import AdminHome from './Admin/AdminHome';
+import AdminLogin from './Admin/AdminLogin';
 
 function App() {
   const currentPath = window.location.pathname;
@@ -26,6 +27,8 @@ function App() {
     PageComponent = Profile;
   } else if (currentPath.toLowerCase() === '/adminhome') {
     PageComponent = AdminHome;
+  } else if (currentPath.toLowerCase() === '/adminlogin') {
+    PageComponent = AdminLogin;
   }
   else {
     PageComponent = HomePage; // Mặc định là trang chủ
