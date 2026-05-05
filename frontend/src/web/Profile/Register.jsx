@@ -79,7 +79,7 @@ const Register = () => {
               type="password" 
               required
               className="w-full p-2.5 bg-stone-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-white outline-none transition" 
-              placeholder="••••••••" 
+              placeholder="********" 
               value={password}
               maxLength={255}
               onChange={(e) => setPassword(e.target.value)}
@@ -92,7 +92,7 @@ const Register = () => {
             <input 
               type="password" 
               className="w-full p-2.5 bg-stone-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-white outline-none transition" 
-              placeholder="••••••••" 
+              placeholder="********" 
               required 
               value={confirmPassword}
               maxLength={255}

@@ -41,6 +41,7 @@ const AdminLogin = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
               placeholder="admin@gmail.com"
+              maxLength={255}
               required 
             />
           </div>
@@ -51,7 +52,8 @@ const AdminLogin = () => {
               value={password} 
               onChange={(e) => setPassword(e.target.value)}
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"
-              placeholder="••••••••"
+              placeholder="********"
+              maxLength={255}
               required 
             />
           </div>

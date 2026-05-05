@@ -69,7 +69,7 @@ const Login = () => {
               <label className="block mb-2 text-sm font-medium text-white">Password</label>
               <input 
                 type="password" 
-                placeholder="••••••••" 
+                placeholder="********" 
                 className="block w-full p-2.5 bg-stone-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 outline-none transition" 
                 required 
                 value={password}

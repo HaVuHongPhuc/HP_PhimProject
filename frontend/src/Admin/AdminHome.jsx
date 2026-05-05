@@ -139,7 +139,7 @@ const AdminHome = () => {
                   <div className="space-y-6">
                     <div className="flex flex-col">
                       <label className="text-sm font-semibold text-gray-600 mb-2">Tiêu đề phim <span className="text-red-500">*</span></label>
-                      <input type="text" name="title" value={formData.title || ''} onChange={handleInputChange} required className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                      <input maxLength={255} type="text" name="title" value={formData.title || ''} onChange={handleInputChange} required className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
                     </div>
                     <div className="flex flex-col">
                       <label className="text-sm font-semibold text-gray-600 mb-2">Danh mục <span className="text-red-500">*</span></label>
@@ -156,11 +156,11 @@ const AdminHome = () => {
                   <div className="space-y-6">
                     <div className="flex flex-col">
                       <label className="text-sm font-semibold text-gray-600 mb-2">Link Video (hoặc Tên file) <span className="text-red-500">*</span></label>
-                      <input type="text" name="videoFile" value={formData.videoFile || ''} onChange={handleInputChange} required className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                      <input maxLength={255} type="text" name="videoFile" value={formData.videoFile || ''} onChange={handleInputChange} required className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
                     </div>
                     <div className="flex flex-col">
                       <label className="text-sm font-semibold text-gray-600 mb-2">Mô tả / Thông tin thêm</label>
-                      <textarea name="description" value={formData.description || ''} onChange={handleInputChange} rows="3" className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+                      <textarea maxLength={255} name="description" value={formData.description || ''} onChange={handleInputChange} rows="3" className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
                     </div>
                   </div>
                 </div>
@@ -171,11 +171,11 @@ const AdminHome = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                   <div className="flex flex-col">
                     <label className="text-sm font-semibold text-gray-600 mb-2">Email <span className="text-red-500">*</span></label>
-                    <input type="email" name="email" value={formData.email || ''} onChange={handleInputChange} required className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                    <input maxLength={255} type="email" name="email" value={formData.email || ''} onChange={handleInputChange} required className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
                   </div>
                   <div className="flex flex-col">
                     <label className="text-sm font-semibold text-gray-600 mb-2">Mật khẩu {isEdit && <span className="text-gray-400 font-normal">(để trống nếu không đổi)</span>} {!isEdit && <span className="text-red-500">*</span>}</label>
-                    <input type="password" name="password" value={formData.password || ''} onChange={handleInputChange} required={!isEdit} className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                    <input maxLength={255} type="password" name="password" value={formData.password || ''} onChange={handleInputChange} required={!isEdit} className="border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
                   </div>
                 </div>
               )}
