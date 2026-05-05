@@ -4,6 +4,9 @@ const Profile = () => {
   const [userInfo, setUserInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
+  const [day, setDay] = useState("Day");
+  const [month, setMonth] = useState("Month");
+  const [year, setYear] = useState("Year");
   
   // State quản lý thông tin chỉnh sửa
   const [newBirthDate, setNewBirthDate] = useState("");

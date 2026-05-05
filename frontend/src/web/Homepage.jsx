@@ -16,9 +16,9 @@ const HomePage = () => {
     alert("Bạn cần đăng nhập để xem phim nhé!");
     // Chuyển hướng người dùng sang trang login
     window.location.href = '/login';
-    return; // Dừng lại, không chạy dòng code bật phim ở dưới nữa
+    return; 
   }
-  // 3. Nếu đã có vé rồi thì bật video lên thôi!
+  // 3. Nếu đã có vé rồi thì bật video
   setPlayingMovie(movie);
 };
 
