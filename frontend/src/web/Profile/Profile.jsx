@@ -87,7 +87,7 @@ const Profile = () => {
               <input 
                 type="text"
                 value={newUsername}
-                maxLength={255}
+                maxLength={25}
                 onChange={(e) => setNewUsername(e.target.value)}
                 className="w-full bg-gray-800 border border-blue-500 rounded-lg py-2 px-3 text-white text-center font-bold text-xl outline-none focus:ring-2 focus:ring-blue-500"
               />
